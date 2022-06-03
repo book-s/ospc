@@ -1,1 +1,0 @@
-const e={key:"v-98993d10",path:"/group/language/go/go.html",title:"Go",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1643981379e3,contributors:[{name:"leva",email:"book_s@126.com",commits:1}]},filePathRelative:"group/language/go/go.md"};export{e as data};

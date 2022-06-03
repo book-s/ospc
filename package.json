@@ -1,14 +1,15 @@
 {
-  "name": "vgo",
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.1"
+  },
+  "name": "opsc.run",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "vgo",
+  "author": "leva <book_s@126.com>",
   "license": "MIT",
-  "devDependencies": {
-    "vuepress": "^2.0.0-beta.35"
-  },
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
   }
 }
