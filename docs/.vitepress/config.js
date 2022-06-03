@@ -1,14 +1,11 @@
 export default {
     // 站点配置
     lang: 'zh-CN',
-    title: 'OPSC.run',
-    description: 'Open secure private connection',
-    base:"/ospc.run/", //这里的路径必须是你创建项目的绝对路径
-  
+    title: 'OPSC',
+    titleTemplate: 'Open secure private connection',
     // 主题和它的配置
     theme: '@vuepress/theme-default',
     themeConfig: {
-    //    siteTitle: 'My Custom Title',
         nav:nav(),
         socialLinks: [
             { icon: 'github', link: 'https://github.com/book-s/ospc' },
