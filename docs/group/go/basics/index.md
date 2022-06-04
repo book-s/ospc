@@ -1,16 +1,7 @@
-## Go基础
-This section will help you build a basic VitePress documentation site from ground up. If you already have an existing project and would like to keep documentation inside the project, start from Step 2.
+## 变量 与 常量
 
-## ABCD
-```go
-package main
+## 
 
-import "fmt"
-
-func main(){
-    fmt.Println("WelcomeGolang")
-}
-```
 ## Go历史
 ::: info
 This is an info box.
@@ -32,6 +23,3 @@ This is a dangerous warning.
 This is a details block.
 :::
 
-## Go是在什么环境下发展起来的
-
-:tada: :100:

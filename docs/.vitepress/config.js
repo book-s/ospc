@@ -69,13 +69,27 @@ function nav() {
 function sidebarGo(){
     return[
         {
+            text: '开发环境准备',
+            collapsible: true,
+            items: [
+                { text: 'VS Code配置Go语言开发环境', link:'/group/go/vscode/index'},
+            ]
+        },
+        {
             text: '基础',
             collapsible: true,
             items: [
                 { text: '基础介绍', link:'/group/go/basics/'},
-                { text: '变量', link:'/group/go/basics/abc'},
-                { text: 'if else', link:'/group/go/basics/abc1'},
-                { text: '结构体', link:'/group/go/basics/abc2'},
+                { text: '变量与常量', link:'/group/go/basics/VariablesConstants'},
+                { text: '数据类型', link:'/group/go/basics/datatype'},
+                { text: '运算符', link:'/group/go/basics/operator'},
+                { text: '流程控制', link:'/group/go/basics/ProcessControl'},
+                { text: '数组', link:'/group/go/basics/array'},
+                { text: '切片', link:'/group/go/basics/slice'},
+                { text: 'Map', link:'/group/go/basics/map'},
+                { text: '函数', link:'/group/go/basics/function'},
+                { text: '指针', link:'/group/go/basics/Pointer'},
+                { text: '结构体', link:'/group/go/basics/StructuralMorphology'},
             ]
         },
         {
