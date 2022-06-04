@@ -6,7 +6,7 @@ export default {
     // 主题和它的配置
     theme: '@vuepress/theme-default',
     themeConfig: {
-        logo: 'https://vuejs.org/images/logo.png',
+    //    logo: 'https://vuejs.org/images/logo.png',
         nav:nav(),
         socialLinks: [
             { icon: 'github', link: 'https://github.com/book-s/ospc' },
@@ -73,6 +73,8 @@ function sidebarGo(){
             collapsible: true,
             items: [
                 { text: 'VS Code配置Go语言开发环境', link:'/group/go/vscode/index'},
+                { text: 'Go依赖管理及Go module使用', link:'/group/go/vscode/module'},
+                { text: '如何使用Go module导入本地包', link:'/group/go/vscode/GoModule'},
             ]
         },
         {
