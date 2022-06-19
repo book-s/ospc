@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: OSPC
-  text: Golang、BlockChain、Vue、AI
+  text: Golang BlockChain Vue AI
   tagline: Study notes...
 
   actions:
