@@ -1,7 +1,7 @@
 export default {
     // 站点配置
     lang: 'zh-CN',
-    title: 'OPSC.run',
+    title: 'OSPC.run',
     titleTemplate: 'Open secure private connection',
     // 主题和它的配置
     theme: '@vuepress/theme-default',
@@ -13,6 +13,7 @@ export default {
         ],
 
         sidebar: {
+            '/group/ospc/': sidebarOspc(),
             '/group/go/':sidebarGo(),
             '/group/data/mysql/':sidebarDataMysql(),
             '/group/data/sqlite/':sidebarDataSqlite(),
@@ -22,6 +23,14 @@ export default {
 
 function nav() {
     return[
+        {
+            text: 'OSPC',
+            collapsible: true,
+            items:[
+                { text: '简介', link: '/group/ospc/Introduction/index', activeMatch: '/group/ospc/Introduction/'},
+                { text: '关于', link: '/group/ospc/about/index', activeMatch: '/group/ospc/about/'},
+            ]
+        },
         {
             text: 'Golang',
             collapsible: true,
@@ -135,6 +144,19 @@ function sidebarDataSqlite(){
             collapsible: true,
             items: [
                 { text: 'Sqlite入门', link:'/group/data/sqlite/'},
+            ]
+        },
+    ]
+}
+
+function sidebarOspc(){
+    return[
+        {
+            text: 'OSPC',
+            collapsible: true,
+            items: [
+                { text: '简介', link:'/group/ospc/Introduction/'},
+                { text: '关于', link:'/group/ospc/about/'},
             ]
         },
     ]
