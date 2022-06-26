@@ -16,6 +16,7 @@ export default {
             '/group/ospc/': sidebarOspc(),
             '/group/go/':sidebarGo(),
             '/group/data/mysql/':sidebarDataMysql(),
+            '/group/code/':sidebarCode(),
             '/group/data/sqlite/':sidebarDataSqlite(),
         }
     },
@@ -46,6 +47,13 @@ function nav() {
             items:[
                 { text: 'MYSQL', link: '/group/data/mysql/index', activeMatch: '/group/data/mysql/'},
                 { text: 'SQLite', link: '/group/data/sqlite/index', activeMatch: '/group/data/sqlite/'},
+            ]
+        },
+        {
+            text: 'Code',
+            collapsible: true,
+            items:[
+                { text: 'Base58', link: '/group/code/base58/index', activeMatch: '/group/code/base58/'},
             ]
         },
         {
@@ -84,6 +92,8 @@ function sidebarGo(){
                 { text: 'VS Code配置Go语言开发环境', link:'/group/go/vscode/index'},
                 { text: 'Go依赖管理及Go module使用', link:'/group/go/vscode/module'},
                 { text: '如何使用Go module导入本地包', link:'/group/go/vscode/GoModule'},
+                { text: 'Golang打包', link:'/group/go/vscode/Build'},
+                { text: 'Ubuntu Go环境配置', link:'/group/go/vscode/ubuntu'},
             ]
         },
         {
@@ -157,6 +167,18 @@ function sidebarOspc(){
             items: [
                 { text: '简介', link:'/group/ospc/Introduction/'},
                 { text: '关于', link:'/group/ospc/about/'},
+            ]
+        },
+    ]
+}
+
+function sidebarCode(){
+    return[
+        {
+            text: 'Code',
+            collapsible: true,
+            items: [
+                { text: 'Base58介绍', link:'/group/code/base58/'},
             ]
         },
     ]
