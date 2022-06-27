@@ -94,6 +94,7 @@ function sidebarGo(){
                 { text: '如何使用Go module导入本地包', link:'/group/go/vscode/GoModule'},
                 { text: 'Golang打包', link:'/group/go/vscode/Build'},
                 { text: 'Ubuntu Go环境配置', link:'/group/go/vscode/ubuntu'},
+                { text: 'air 热重载', link:'/group/go/vscode/air'},
             ]
         },
         {
