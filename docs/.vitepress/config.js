@@ -15,6 +15,7 @@ export default {
         sidebar: {
             '/group/ospc/': sidebarOspc(),
             '/group/go/':sidebarGo(),
+            '/group/ipfs/':sidebarIpfs(),
             '/group/data/mysql/':sidebarDataMysql(),
             '/group/code/':sidebarCode(),
             '/group/data/sqlite/':sidebarDataSqlite(),
@@ -39,6 +40,13 @@ function nav() {
                 { text: '基础', link: '/group/go/basics/index', activeMatch: '/group/go/basics/'},
                 { text: '进阶', link: '/group/go/advanced/index', activeMatch: '/group/go/advanced/'},
                 { text: '标准库', link: '/group/go/library/index', activeMatch: '/group/go/library/'},
+            ]
+        },
+        {
+            text: 'Ipfs',
+            collapsible: true,
+            items:[
+                { text: 'IPFS', link: '/group/ipfs/index', activeMatch: '/group/ipfs/'},
             ]
         },
         {
@@ -180,6 +188,18 @@ function sidebarCode(){
             collapsible: true,
             items: [
                 { text: 'Base58介绍', link:'/group/code/base58/'},
+            ]
+        },
+    ]
+}
+
+function sidebarIpfs(){
+    return[
+        {
+            text: 'IPFS',
+            collapsible: true,
+            items: [
+                { text: 'IPFS', link:'/group/ipfs/'},
             ]
         },
     ]
