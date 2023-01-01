@@ -113,12 +113,10 @@ function sidebarGo(){
             text: '开发环境准备',
             collapsible: true,
             items: [
-                { text: 'VS Code配置Go语言开发环境', link:'/group/go/vscode/index'},
-                { text: 'Go依赖管理及Go module使用', link:'/group/go/vscode/module'},
-                { text: '如何使用Go module导入本地包', link:'/group/go/vscode/GoModule'},
+                { text: 'VS Code配置Go语言开发环境', link:'/group/go/vscode/index'},     
                 { text: 'Golang打包', link:'/group/go/vscode/Build'},
                 { text: 'Ubuntu Go环境配置', link:'/group/go/vscode/ubuntu'},
-                { text: 'air 热重载', link:'/group/go/vscode/air'},
+
             ]
         },
         {

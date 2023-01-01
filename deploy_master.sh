@@ -2,7 +2,7 @@
 
 
 cd ./
-# rm -rf ./docs/.vitepress/dist
+rm -rf ./docs/.vitepress/dist
 git init
 git add .
 git commit -m 'master'
