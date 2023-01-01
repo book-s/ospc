@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.34",
+    "vue": "^3.2.45"
+  },
+  "name": "ospc.run",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "leva <book_s@126.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  }
+}
