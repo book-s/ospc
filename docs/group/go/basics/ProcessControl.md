@@ -144,15 +144,15 @@ func main() {
 - 没有while
 - switch不需要break，也可以直接switch多个条件
 
-
+--------------------------------
 Go 语言提供了多种流程控制语句，包括：
-- if 语句：用于条件判断。
-- for 语句：用于循环。
-- switch 语句：用于多条件判断。
-- goto 语句：用于跳转到指定标签。
-- defer 语句：用于延迟函数调用。
+- 1. `if` 语句：用于条件判断。
+- 2. `for` 语句：用于循环。
+- 3. `switch` 语句：用于多条件判断。
+- 4. `goto` 语句：用于跳转到指定标签。
+- 5. `defer` 语句：用于延迟函数调用。
 
-例如，你可以使用 if 语句来进行条件判断：
+例如，你可以使用 `if`语句来进行条件判断：
 ```sh
 if x > 0 {
     fmt.Println("x is positive")
@@ -160,13 +160,13 @@ if x > 0 {
     fmt.Println("x is non-positive")
 }
 ```
-你可以使用 for 语句来进行循环：
+你可以使用 `for` 语句来进行循环：
 ```sh
 for i := 0; i < 10; i++ {
     fmt.Println(i)
 }
 ```
-你可以使用 switch 语句来进行多条件判断：
+你可以使用 `switch` 语句来进行多条件判断：
 ```sh
 switch x {
 case 0:
