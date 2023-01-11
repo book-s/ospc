@@ -37,7 +37,7 @@ go env -w GOPROXY=https://goproxy.cn,direct
 go mod init Project/m/v2  #使用Go Modules v2 管理依赖项
 ```
 
-### ubuntu更新命令
+## ubuntu更新命令
 常用的APT命令参数：
 
 - `apt-cache search package` 搜索包
