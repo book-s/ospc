@@ -113,6 +113,7 @@ function sidebarGo(){
             text: '开发环境准备',
             collapsible: true,
             items: [
+                { text: 'Ubuntu基础', link:'/group/go/vscode/ubuntu-use'},
                 { text: 'VS Code配置Go语言开发环境', link:'/group/go/vscode/index'},     
                 { text: 'Golang打包', link:'/group/go/vscode/Build'},
                 { text: 'Ubuntu Go环境配置', link:'/group/go/vscode/ubuntu'},

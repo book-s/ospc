@@ -57,3 +57,7 @@ go mod init Project/m/v2  #使用Go Modules v2 管理依赖项
 - `apt-get source package` 下载该包的源代码
 - `sudo apt-get clean && sudo apt-get autoclean` 清理无用的包
 - `sudo apt-get check` 检查是否有损坏的依赖
+
+
+## Ubuntu samba
+
