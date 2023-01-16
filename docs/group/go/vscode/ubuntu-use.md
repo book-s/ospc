@@ -29,12 +29,15 @@ sudo kill -9 PID进程号
 ## Ubuntu创建用户和目录
 
 ### 创建新用户
-```sh
-# 注意要在后面加-m，否则不会在home路径下创建该用户的文件夹
-sudo useradd username -m
+- `adduser` 
+- `useradd`需要使用参数选项指定上述基本设置，如果不使用任何参数，则创建的用户无密码、无主目录、没有指定shell版本。
 
-# 执行如下命令查看passwd文件中是否有刚才添加的用户名，如果有，则表示添加成功
-cat /etc/passwd
+- `deluser`
+- `userdel`
+```sh
+sudo useradd username -m  # 注意要在后面加-m，否则不会在home路径下创建该用户的文件夹
+sudo useradd -G groupname username  # 创建用户并添加到指定组
+cat /etc/passwd  # 执行如下命令查看passwd文件中是否有刚才添加的用户名，如果有，则表示添加成功
 ```
 
 ### 新用户设置密码
@@ -94,10 +97,14 @@ gitbook:x:1002:1002::/home/gitbook:/bin/bash
 # 加上-r可以删除/home/路径下的用户文件夹，否则不能
 sudo userdel -r username
 ```
-## 查看组方法
+## 组
+- `groupadd`创建用户组
+```sh
+groupadd -g 888 share # 其GID为888
+```
 ### 组查看
 ```sh
-groups
+groups # 查看当前用户组
 ```
 查看groups当前用户所在组
 
@@ -147,7 +154,7 @@ sudo chmod 777 /home/<userfile>/Share
 ### 添加Samba用户
 - 添加 Samba 用户，用于在访问共享目录时使用。这里添加的用户在 Linux 中必须存在。
 ```sh
-sudo smbpasswd -a username
+sudo smbpasswd -a username # samba添加用户 修改密码
 ```
 
 ### Samba配置
@@ -164,6 +171,19 @@ smb.conf文件最后面追加如下配置信息
   writable = yes
   available = yes
   valid users = sshare,@sshare      # 插入组用@sshare让跟多用户可以访问
+```
+smb.conf文件配置多用户访问
+```sh
+[smbresource]                         # 资源名 这里叫什么 连接samba后显示的目录就叫什么
+  comment = smbuser Media File        # 注释
+  path = /yourpath                    # 需要samba共享的目录
+  valid user = smbuser,smbuseradmin   # 可以使用该资源的用户，多个用户用‘,’分隔
+  guest ok = no                       # 是否运行guest用户
+  read only = yes                     # 是否只读
+  write list = smbuseradmin           # 有可写权限的用户列表，多个用户用‘,’分隔
+  browsable = yes                     # 是否能被浏览到，如果选了否 只能通过 ‘\\<ip>/资源名’访问，实测这样在有些环境会出问题，一般建议开启
+  create mask = 0755
+  directory mask =0755
 ```
 运行命令`systemctl restart`重新启动Samba服务
 ```sh
@@ -215,5 +235,9 @@ sudo netplan apply
 - addresses:接口的静态地址序列
 - gateway4:默认网关的IPV4地址
 - Nameservers:DNS服务器地址
+
+
+
+
 
 
