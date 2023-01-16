@@ -43,10 +43,20 @@ cat /etc/passwd
 sudo passwd username
 ```
 
+### 用户加入指定工作组
+```sh
+sudo gpasswd -a username groupname            # 将用户加入工作组
+sudo gpasswd -M username,username2 groupname  # 将用户批量加入工作组
+
+```
 
 ### 查看新的用户
 ```sh
 cat /etc/passwd | grep username
+cat -n /etc/passwd                # 查看用户详细信息，参数-n显示行号
+cat -n /etc/group                 # 查看组详细信息
+who                               # 查看当前所有登录的用户列表
+whoami                            # 查看当前登录用户的账号
 ```
 
 ### 新用户增加sudo权限
@@ -117,24 +127,27 @@ groupdel users
 ```sh
 sudo apt update             # 更新程序列表
 sudo apt install samba      # 安装samba程序
-sudo systemctl status nmbd  #  检查Samba服务器是否正常运行
+```
+通过运行`whereis samba`命令、检查samba安装是否成功，显示一下内容表示安装成功
+```sh
+samba: /usr/sbin/samba /usr/lib/x86_64-linux-gnu/samba /etc/samba /usr/share/samba /usr/share/man/man8/samba.8.gz /usr/share/man/man7/samba.7.gz
 ```
 ### 配置创建共享目录
 ```sh
 # 新建目录，用于共享
-sudo mkdir /home/ubuntu/Share
+sudo mkdir /home/<userfile>/Share
 
 # 更改权限信息
-sudo chown nobody:nogroup /home/ubuntu/Share
+sudo chown nobody:nogroup /home/<userfile>/share
 
 # 给所有用户添加读写权限
-sudo chmod 777 /home/ubuntu/Share
+sudo chmod 777 /home/<userfile>/Share
 ```
 
 ### 添加Samba用户
 - 添加 Samba 用户，用于在访问共享目录时使用。这里添加的用户在 Linux 中必须存在。
 ```sh
-sudo smbpasswd -a alan
+sudo smbpasswd -a username
 ```
 
 ### Samba配置
@@ -144,22 +157,22 @@ sudo vim /etc/samba/smb.conf
 ```
 smb.conf文件最后面追加如下配置信息
 ```sh
-[Share]
-  comment = TimeCapsule Volumes
-  path = /home/ubuntu/Share
+[share]
+  comment = SHARE
+  path = /home/<userfile>/share
   browseable = yes
   writable = yes
   available = yes
-  valid users = alan
+  valid users = sshare,@sshare      # 插入组用@sshare让跟多用户可以访问
 ```
 运行命令`systemctl restart`重新启动Samba服务
 ```sh
-sudo systemctl restart smbd
-sudo systemctl restart nmbd
-# 或
 sudo service smbd restart
 ```
-
+更新防火墙规则以允许Samba流量
+```sh
+sudo ufw allow samba
+```
 ## ufw防火墙状态
 - `sudo ufw status` 查看防火墙当前状态
 - `sudo ufw enable` 开启防火墙
@@ -202,3 +215,5 @@ sudo netplan apply
 - addresses:接口的静态地址序列
 - gateway4:默认网关的IPV4地址
 - Nameservers:DNS服务器地址
+
+
