@@ -1,0 +1,1 @@
+import{_ as s,c as n,o as a,a as p}from"./app.a7d8838a.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"group/libp2p/index.md"}'),l={name:"group/libp2p/index.md"},e=p("",3),r=[e];function o(i,c,t,b,A,C){return a(),n("div",null,r)}const y=s(l,[["render",o]]);export{m as __pageData,y as default};

@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as r}from"./app.a7d8838a.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"group/libp2p/mdns.md"}'),a={name:"group/libp2p/mdns.md"};function o(s,n,p,c,d,i){return r(),t("div")}const l=e(a,[["render",o]]);export{_ as __pageData,l as default};

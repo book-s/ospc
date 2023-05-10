@@ -1,0 +1,1 @@
+import{_ as o,c as n,o as e,a as t}from"./app.a7d8838a.js";const l=JSON.parse('{"title":"sync","description":"","frontmatter":{},"headers":[],"relativePath":"group/go/library/sync.md"}'),c={name:"group/go/library/sync.md"},r=t("",4),s=[r];function i(a,u,d,p,y,g){return e(),n("div",null,s)}const h=o(c,[["render",i]]);export{l as __pageData,h as default};

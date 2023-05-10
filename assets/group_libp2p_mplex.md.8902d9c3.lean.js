@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as p}from"./app.a7d8838a.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"group/libp2p/mplex.md"}'),r={name:"group/libp2p/mplex.md"};function a(o,s,c,n,i,l){return p(),t("div")}const d=e(r,[["render",a]]);export{_ as __pageData,d as default};

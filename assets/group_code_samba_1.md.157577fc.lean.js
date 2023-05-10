@@ -1,0 +1,1 @@
+import{_ as e,c as r,o as t,a}from"./app.a7d8838a.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"group/code/samba/1.md"}'),s={name:"group/code/samba/1.md"},o=a("",10),p=[o];function c(n,_,i,d,b,l){return t(),r("div",null,p)}const h=e(s,[["render",c]]);export{u as __pageData,h as default};
